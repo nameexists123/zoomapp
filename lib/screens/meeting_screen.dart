@@ -6,13 +6,13 @@ import 'package:zoomapp/widgets/home_meeting_button.dart';
 class MeetingScreen extends StatelessWidget {
   MeetingScreen({Key? key}) : super(key: key);
 
-  // final JitsiMeetMethods _jitsiMeetMethods = JitsiMeetMethods();
+  final JitsiMeetMethods _jitsiMeetMethods = JitsiMeetMethods();
 
   createNewMeeting() async {
     var random = Random();
     String roomName = (random.nextInt(10000000) + 10000000).toString();
-    // _jitsiMeetMethods.createMeeting(
-    //      roomName: roomName, isAudioMuted: true, isVideoMuted: true);
+    _jitsiMeetMethods.createMeeting(
+         roomName: roomName, isAudioMuted: true, isVideoMuted: true);
   }
 
   joinMeeting(BuildContext context) {
